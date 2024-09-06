@@ -40,4 +40,29 @@ public class ListaTarefa {
             System.out.println("A lista esta vazia!");
         }
     }
+
+    public static void main(String[] args) {
+        // Criando uma instancia da classe ListaTarefa
+        ListaTarefa listaTarefa = new ListaTarefa();
+
+        // Adicionando tarefas à lista
+        listaTarefa.adicionarTarefa("Comprar leite");
+        listaTarefa.adicionarTarefa("Estudar para o exame");
+        listaTarefa.adicionarTarefa("Fazer exercícios");
+
+        //Exibindo o nº total de tarefas na lista
+        System.out.println("O total de tarefas é " + listaTarefa.obterNumeroTotalTarefas());
+
+        //Exibindo as decrições das tarefas na lista
+        listaTarefa.obterDescricoesTarefas();
+
+        //removendo uma tarefa da lista
+        listaTarefa.removerTarefa("Estudar para o exame");
+
+        // Exibindo o total de tarefas após a remoção
+        System.out.println("Agora o total de tarefas é de " + listaTarefa.obterNumeroTotalTarefas());
+
+        // Exibindo as descrições das tarefas atualizadas
+        listaTarefa.obterDescricoesTarefas();
+    }
 }
