@@ -42,18 +42,27 @@ public class ListaTarefa {
     }
 
     public static void main(String[] args) {
+        // Criando uma instancia da classe ListaTarefa
         ListaTarefa listaTarefa = new ListaTarefa();
 
-        System.out.println("O nº total de elementos é: " + listaTarefa.obterNumeroTotalTarefas());
+        // Adicionando tarefas à lista
+        listaTarefa.adicionarTarefa("Comprar leite");
+        listaTarefa.adicionarTarefa("Estudar para o exame");
+        listaTarefa.adicionarTarefa("Fazer exercícios");
 
-        listaTarefa.adicionarTarefa("Tarefa 1");
-        listaTarefa.adicionarTarefa("Tarefa 1");
-        listaTarefa.adicionarTarefa("Tarefa 2");
-        System.out.println("O nº total de elementos é: " + listaTarefa.obterNumeroTotalTarefas());
+        //Exibindo o nº total de tarefas na lista
+        System.out.println("O total de tarefas é " + listaTarefa.obterNumeroTotalTarefas());
 
-        listaTarefa.removerTarefa("Tarefa 1");
-        System.out.println("O nº total de elementos é: " + listaTarefa.obterNumeroTotalTarefas());
+        //Exibindo as decrições das tarefas na lista
+        listaTarefa.obterDescricoesTarefas();
 
+        //removendo uma tarefa da lista
+        listaTarefa.removerTarefa("Estudar para o exame");
+
+        // Exibindo o total de tarefas após a remoção
+        System.out.println("Agora o total de tarefas é de " + listaTarefa.obterNumeroTotalTarefas());
+
+        // Exibindo as descrições das tarefas atualizadas
         listaTarefa.obterDescricoesTarefas();
     }
 }
