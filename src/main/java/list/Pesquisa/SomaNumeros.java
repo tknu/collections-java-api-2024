@@ -20,7 +20,7 @@ public class SomaNumeros {
     int soma = 0;
     for (Integer numero : numeros)
       soma += numero;
-    return soma;
+      return soma;
   }
 
   public int encontrarMaiorNumero() {
